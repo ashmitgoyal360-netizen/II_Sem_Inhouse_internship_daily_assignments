@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaipur Heritage Run 2026 | Run through history</title>
+    <meta name="description" content="Join the Jaipur Heritage Run on 25 July 2026. Run a historic route starting from Albert Hall Museum, passing through Hawa Mahal, and finishing at Jal Mahal. Register today!">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator with Running Mascot -->
+    <div class="scroll-progress-container">
+        <div id="scrollProgress" class="scroll-progress-bar">
+            <i class="fa-solid fa-person-running scroll-runner"></i>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-person-running me-2 text-gradient-pink"></i>JAIPUR<span>HERITAGE</span>RUN
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#route">The Route</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#rewards">Rewards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tools">Runner Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#schedule">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faqs">FAQs</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <button class="btn btn-premium" data-bs-toggle="modal" data-bs-target="#registerModal">Register Now</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="aura-container">
+            <div class="aura-bubble aura-rose"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="row align-items-center">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <div class="hero-badge reveal">
+                        <i class="fa-solid fa-clock"></i> Countdown to Flag-off
+                    </div>
+                    <h1 class="hero-title text-gradient reveal">Run Through The Heart Of History</h1>
+                    <p class="hero-desc reveal">Experience the majestic <span class="highlight-pink">Pink City</span> on foot. Run from the iconic <span class="highlight-gold">Albert Hall Museum</span>, through historic bazaars, past <span class="highlight-pink">Hawa Mahal</span>, and cross the finish line overlooking the floating <span class="highlight-gold">Jal Mahal</span> palace.</p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3 reveal">
+                        <button class="btn btn-premium btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">Secure Your Spot</button>
+                        <a href="#route" class="btn btn-premium-outline btn-lg">Explore Route</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 mt-5 mt-lg-0 reveal">
+                    <div class="countdown-container mx-auto">
+                        <h4 class="text-center mb-4 text-gradient-pink" style="font-family: var(--font-sans); font-weight:700; font-size:1.3rem; letter-spacing:1px; text-transform:uppercase;">Time Remaining</h4>
+                        <div class="countdown-wrapper">
+                            <div class="countdown-box">
+                                <span id="days" class="countdown-val">00</span>
+                                <span class="countdown-lbl">Days</span>
+                                <span class="countdown-divider">:</span>
+                            </div>
+                            <div class="countdown-box">
+                                <span id="hours" class="countdown-val">00</span>
+                                <span class="countdown-lbl">Hours</span>
+                                <span class="countdown-divider">:</span>
+                            </div>
+                            <div class="countdown-box">
+                                <span id="minutes" class="countdown-val">00</span>
+                                <span class="countdown-lbl">Min</span>
+                                <span class="countdown-divider">:</span>
+                            </div>
+                            <div class="countdown-box">
+                                <span id="seconds" class="countdown-val">00</span>
+                                <span class="countdown-lbl">Sec</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info Strip -->
+    <div class="quick-info-strip">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 reveal">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fa-regular fa-calendar-days"></i>
+                        </div>
+                        <div class="info-text">
+                            <h5>Date & Time</h5>
+                            <p>Saturday, <span class="highlight-pink">25 July 2026</span> | <span class="highlight-gold">06:00 AM IST</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                        </div>
+                        <div class="info-text">
+                            <h5>Start Line</h5>
+                            <p><span class="highlight-gold">Albert Hall Museum</span>, Jaipur</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-flag-checkered"></i>
+                        </div>
+                        <div class="info-text">
+                            <h5>Finish Line</h5>
+                            <p><span class="highlight-pink">Jal Mahal</span> (Water Palace), Jaipur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-title-wrapper reveal">
+                <span class="section-subtitle">The Event</span>
+                <h2 class="section-title text-gradient">Fitness Meets Cultural Heritage</h2>
+            </div>
+            
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal">
+                    <h3 class="mb-4 text-gradient-pink" style="font-size: 1.9rem; font-weight:800;">A Run Like No Other</h3>
+                    <p class="text-muted">The <span class="highlight-pink">Jaipur Heritage Run</span> is not just a marathon; it is a scenic <span class="highlight-gold">journey back in time</span>. As you navigate the cobblestone and asphalt roads of India's famed Pink City, you will be surrounded by century-old architecture, massive historic fort walls, and greeting locals.</p>
+                    <p class="text-muted mb-4">Starting under the beautiful early morning glow at <span class="highlight-gold">Albert Hall Museum</span>, the course takes you through historical city gates, directly past the honeycomb architecture of <span class="highlight-pink">Hawa Mahal</span>, and culminates at the edge of the quiet Man Sagar Lake, showcasing the floating <span class="highlight-gold">Jal Mahal</span> palace at sunrise.</p>
+                    <div class="d-flex gap-4 align-items-center">
+                        <div class="text-center">
+                            <h2 class="mb-0 text-gradient-pink" style="font-weight: 800; font-family: var(--font-sports);">5000+</h2>
+                            <small class="text-muted text-uppercase" style="font-size:0.8rem; font-weight:700; letter-spacing:1px;">Runners Expected</small>
+                        </div>
+                        <div style="width: 1px; height: 40px; background-color: var(--border-color);"></div>
+                        <div class="text-center">
+                            <h2 class="mb-0 text-gradient-pink" style="font-weight: 800; font-family: var(--font-sports);">3</h2>
+                            <small class="text-muted text-uppercase" style="font-size:0.8rem; font-weight:700; letter-spacing:1px;">Distance Categories</small>
+                        </div>
+                        <div style="width: 1px; height: 40px; background-color: var(--border-color);"></div>
+                        <div class="text-center">
+                            <h2 class="mb-0 text-gradient-pink" style="font-weight: 800; font-family: var(--font-sports);">₹1.5M</h2>
+                            <small class="text-muted text-uppercase" style="font-size:0.8rem; font-weight:700; letter-spacing:1px;">Prize Pool</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-features">
+                        <div class="feature-box reveal">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div>
+                                <h4>Fully Secured & Managed Route</h4>
+                                <p class="text-muted">Complete traffic control, <span class="highlight-pink">digital timing chips</span>, medical aid stations <span class="highlight-gold">every 1.5km</span>, and dedicated hydration zones.</p>
+                            </div>
+                        </div>
+                        <div class="feature-box reveal">
+                            <i class="fa-solid fa-trophy"></i>
+                            <div>
+                                <h4>Premium Runner Kit</h4>
+                                <p class="text-muted">Exclusive <span class="highlight-gold">dry-fit jersey</span>, electronic timing bib, custom <span class="highlight-pink">finisher medal</span>, hot Rajasthani breakfast, and e-certificate.</p>
+                            </div>
+                        </div>
+                        <div class="feature-box reveal">
+                            <i class="fa-solid fa-guitar"></i>
+                            <div>
+                                <h4>Cultural Cheer Zones</h4>
+                                <p class="text-muted">Traditional Rajasthani <span class="highlight-pink">folk musicians and dancers</span> at multiple cheering points along the route to keep your spirits high.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Timeline Route Section (Split-Scroll) -->
+    <section id="route" class="route-section">
+        <div class="container">
+            <div class="section-title-wrapper reveal">
+                <span class="section-subtitle">Course Map</span>
+                <h2 class="section-title text-gradient">The Interactive Route</h2>
+            </div>
+            
+            <div class="row route-row">
+                <!-- Left Column: Sticky Landmark Visual Showcase (Desktop Only) -->
+                <div class="col-lg-5 route-sticky-col reveal">
+                    <div class="route-sticky-panel glow-active theme-gold" id="routeStickyPanel">
+                        <!-- Cross-Fading Image Viewport -->
+                        <div class="route-image-viewport">
+                            <img src="images/albert_hall.jpg" alt="Albert Hall Museum" class="route-img-layer active" id="routeImg0">
+                            <img src="images/hawa_mahal.jpg" alt="Hawa Mahal" class="route-img-layer" id="routeImg1">
+                            <img src="images/jal_mahal.jpg" alt="Jal Mahal" class="route-img-layer" id="routeImg2">
+                        </div>
+                        
+                        <!-- Dashboard Panel -->
+                        <div class="route-dashboard">
+                            <div class="route-stat-grid">
+                                <div class="route-stat-grid">
+                                    <div class="route-stat-box">
+                                        <div class="route-stat-val" id="routeStatDistance">0.0 KM</div>
+                                        <div class="route-stat-lbl">Distance</div>
+                                    </div>
+                                    <div class="route-stat-box">
+                                        <div class="route-stat-val" id="routeStatElevation">Flat</div>
+                                        <div class="route-stat-lbl">Elevation</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Elevation Graphic -->
+                            <div class="mb-3">
+                                <div class="route-stat-lbl mb-1 text-start">Elevation Profile</div>
+                                <div class="elevation-track">
+                                    <div class="elevation-bar" id="elevationBar" style="width: 10%;"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Checkpoint Runner Tip Box -->
+                            <div class="route-tip-box">
+                                <div class="route-tip-title">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span id="routeTipTitle">Race Start Tips</span>
+                                </div>
+                                <p class="route-tip-text" id="routeTipText">Warm up thoroughly under the Albert Hall gates. Pace yourself slowly for the first 2 kilometers as crowds clear out.</p>
+                            </div>
+
+                            <!-- Simulator Controller Button -->
+                            <button class="btn btn-simulate w-100 mt-3" id="btnSimulateRoute">
+                                <i class="fa-solid fa-play me-2"></i>Virtual Route Run
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Scrollable Milestone Cards -->
+                <div class="col-lg-7 ps-lg-5 position-relative">
+                    <!-- Vertical Timeline connectors (with scroll running mascot) -->
+                    <div class="milestone-timeline-track"></div>
+                    <div class="milestone-timeline-progress" id="milestoneProgress"></div>
+                    <i class="fa-solid fa-person-running milestone-runner-mascot" id="milestoneRunner"></i>
+                    
+                    <div class="milestone-scroller">
+                        <!-- Milestone 1 -->
+                        <div class="milestone-card active glow-active reveal" id="milestoneCard0" data-route-index="0" data-theme-class="theme-gold" data-distance="0.0 KM" data-elevation="Flat" data-elevation-percent="10" data-tip-title="Race Start Tips" data-tip-text="Warm up thoroughly under the Albert Hall gates. Pace yourself slowly for the first 2 kilometers as crowds clear out.">
+                            <div class="milestone-header">
+                                <span class="timeline-badge"><i class="fa-solid fa-location-dot me-1"></i> STARTING GRID</span>
+                                <span class="milestone-number">01</span>
+                            </div>
+                            <img src="images/albert_hall.jpg" alt="Albert Hall Museum" class="milestone-mobile-img">
+                            <h4>Albert Hall Museum</h4>
+                            <p class="text-muted">Begin your run at Jaipur's <span class="highlight-gold">oldest museum</span>. Built in <span class="highlight-pink">1887</span>, this architectural masterpiece provides a royal start in the cool morning twilight. Runners gather in organized holding grids classified by target times.</p>
+                            <div class="d-flex gap-3 mt-3 text-muted small">
+                                <span><i class="fa-solid fa-droplet text-gradient-pink me-1"></i> Hydration Point</span>
+                                <span><i class="fa-solid fa-kit-medical text-gradient-pink me-1"></i> First Aid</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Milestone 2 -->
+                        <div class="milestone-card reveal" id="milestoneCard1" data-route-index="1" data-theme-class="theme-rose" data-distance="4.5 KM" data-elevation="+12m incline" data-elevation-percent="60" data-tip-title="Cheer Zone advice" data-tip-text="The bazaar streets narrow around Hawa Mahal. Keep in your pacing rhythm, avoid overtaking abruptly, and soak in the folk drums!">
+                            <div class="milestone-header">
+                                <span class="timeline-badge" style="background:rgba(255, 94, 122, 0.15); border-color:var(--border-color); color:var(--primary-pink);"><i class="fa-solid fa-music me-1"></i> CULTURAL CHEER ZONE</span>
+                                <span class="milestone-number">02</span>
+                            </div>
+                            <img src="images/hawa_mahal.jpg" alt="Hawa Mahal" class="milestone-mobile-img">
+                            <h4>Hawa Mahal (Palace of Winds)</h4>
+                            <p class="text-muted">Run past the iconic pink sandstone facade. With its <span class="highlight-pink">953 micro-windows</span> catching the sunrise, this is the ultimate heritage cheering zone. Rajasthan <span class="highlight-gold">folk dancers</span> and traditional <span class="highlight-pink">dhol players</span> will energize you as you fly past.</p>
+                            <div class="d-flex gap-3 mt-3 text-muted small">
+                                <span><i class="fa-solid fa-droplet text-gradient-pink me-1"></i> Hydration</span>
+                                <span><i class="fa-solid fa-music text-gradient-pink me-1"></i> Live Music</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Milestone 3 -->
+                        <div class="milestone-card reveal" id="milestoneCard2" data-route-index="2" data-theme-class="theme-teal" data-distance="Finish Line" data-elevation="Flat (Lake)" data-elevation-percent="100" data-tip-title="Finish line sprint" data-tip-text="Savor the view as you make your final push. Once you cross, head immediately to the recovery zone for electrolytes and breakfast.">
+                            <div class="milestone-header">
+                                <span class="timeline-badge" style="background:rgba(255, 184, 48, 0.15); border-color:rgba(255, 184, 48, 0.3); color:var(--accent-gold);"><i class="fa-solid fa-flag-checkered me-1"></i> CHAMPIONSHIP FINISH</span>
+                                <span class="milestone-number">03</span>
+                            </div>
+                            <img src="images/jal_mahal.jpg" alt="Jal Mahal" class="milestone-mobile-img">
+                            <h4>Jal Mahal (Water Palace)</h4>
+                            <p class="text-muted">Cross the finish line right opposite the <span class="highlight-gold">floating palace</span> in the middle of Man Sagar lake. Receive your royal <span class="highlight-pink">finisher medal</span>, recover in the sports physiotherapy grids, and celebrate with a hot <span class="highlight-gold">traditional breakfast</span>.</p>
+                            <div class="d-flex gap-3 mt-3 text-muted small">
+                                <span><i class="fa-solid fa-kit-medical text-gradient-pink me-1"></i> Recovery Grid</span>
+                                <span><i class="fa-solid fa-mug-hot text-gradient-pink me-1"></i> Hot Buffet</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Race Categories Section -->
+    <section id="categories" class="categories-section">
+        <div class="container">
+            <div class="section-title-wrapper reveal">
+                <span class="section-subtitle">Distances</span>
+                <h2 class="section-title text-gradient">Choose Your Challenge</h2>
+            </div>
+            
+            <div class="row g-4">
+                <!-- 5K Fun Run -->
+                <div class="col-md-4 reveal">
+                    <div class="category-card">
+                        <div class="position-relative">
+                            <span class="category-tag">Fun Run</span>
+                            <div class="category-dist">5K</div>
+                            <h3 class="category-name">Heritage Walk & Run</h3>
+                        </div>
+                        <ul class="category-details">
+                            <li><i class="fa-solid fa-circle-check"></i> <span class="highlight-gold">Non-timed</span> Fun Run</li>
+                            <li><i class="fa-solid fa-circle-check"></i> For ages <span class="highlight-pink">12 and above</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> Finisher Medal & Certificate</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Heritage Run T-Shirt</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Hydration & Breakfast</li>
+                        </ul>
+                        <div>
+                            <div class="category-price">₹499 <span>/ $7</span></div>
+                            <button class="btn btn-premium w-100" data-bs-toggle="modal" data-bs-target="#registerModal" data-category="5k">Register for 5K</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 10K Timed Run -->
+                <div class="col-md-4 reveal">
+                    <div class="category-card">
+                        <div class="position-relative">
+                            <span class="category-tag" style="background: var(--sunset-gradient); color: var(--dark-bg); font-weight:800;">Popular</span>
+                            <div class="category-dist" style="color: var(--accent-gold);">10K</div>
+                            <h3 class="category-name">Heritage Challenge</h3>
+                        </div>
+                        <ul class="category-details">
+                            <li><i class="fa-solid fa-circle-check"></i> <span class="highlight-gold">Electronic Timing Chip</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> For ages <span class="highlight-pink">15 and above</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> Finisher Medal & E-Certificate</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Heritage Run T-Shirt & Goodie Bag</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Comprehensive Route Support</li>
+                        </ul>
+                        <div>
+                            <div class="category-price">₹799 <span>/ $11</span></div>
+                            <button class="btn btn-premium w-100" data-bs-toggle="modal" data-bs-target="#registerModal" data-category="10k">Register for 10K</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 21K Half Marathon -->
+                <div class="col-md-4 reveal">
+                    <div class="category-card">
+                        <div class="position-relative">
+                            <span class="category-tag">Elite Race</span>
+                            <div class="category-dist">21K</div>
+                            <h3 class="category-name">Royal Half Marathon</h3>
+                        </div>
+                        <ul class="category-details">
+                            <li><i class="fa-solid fa-circle-check"></i> <span class="highlight-gold">Electronic Timing Chip</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> For ages <span class="highlight-pink">18 and above</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span class="highlight-gold">Premium Finisher Medal</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> Dry-Fit Jersey & Premium Goodies</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Hot Breakfast & Recovery Zone</li>
+                        </ul>
+                        <div>
+                            <div class="category-price">₹1299 <span>/ $18</span></div>
+                            <button class="btn btn-premium w-100" data-bs-toggle="modal" data-bs-target="#registerModal" data-category="21k">Register for 21K</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Finisher Rewards & Digital Badges Section -->
+    <section id="rewards" class="rewards-section">
+        <div class="aura-container">
+            <div class="aura-bubble aura-gold"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="section-title-wrapper reveal">
+                <span class="section-subtitle">Runner Rewards</span>
+                <h2 class="section-title text-gradient">Prizes & Finisher Badges</h2>
+            </div>
+
+            <!-- Cash Prize Podium Layout -->
+            <div class="podium-container reveal">
+                <h3 class="text-center mb-5 text-gradient-pink" style="font-family: var(--font-sports); font-weight:800; font-size:1.8rem; letter-spacing:1px; text-transform:uppercase;">Overall Cash Prizes (₹15,00,000 Pool)</h3>
+                <div class="row g-4 align-items-end justify-content-center">
+                    <div class="col-md-4 order-2 order-md-1">
+                        <div class="podium-card second-place">
+                            <div class="podium-medal"><i class="fa-solid fa-award"></i></div>
+                            <div class="podium-amount">₹3,00,000</div>
+                            <div class="podium-rank">2nd Place Winner</div>
+                            <p class="text-muted mt-2 small">Elite 21K Category (Male/Female)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 order-1 order-md-2">
+                        <div class="podium-card first-place">
+                            <div class="podium-medal"><i class="fa-solid fa-crown"></i></div>
+                            <div class="podium-amount" style="color: var(--accent-gold);">₹5,00,000</div>
+                            <div class="podium-rank" style="color: var(--accent-gold);">1st Place Champion</div>
+                            <p class="text-muted mt-2 small">Elite 21K Category + Royal Trophy</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 order-3 order-md-3">
+                        <div class="podium-card third-place">
+                            <div class="podium-medal"><i class="fa-solid fa-medal"></i></div>
+                            <div class="podium-amount">₹1,50,000</div>
+                            <div class="podium-rank">3rd Place Winner</div>
+                            <p class="text-muted mt-2 small">Elite 21K Category (Male/Female)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Digital Badges Display -->
+            <h3 class="text-center mb-5 text-gradient-pink reveal" style="font-family: var(--font-sports); font-weight:800; font-size:1.8rem; letter-spacing:1px; text-transform:uppercase;">Unlockable Digital Badges</h3>
+            <div class="row g-4">
+                <div class="col-md-4 reveal">
+                    <div class="badge-card">
+                        <div class="badge-icon-wrap">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h4 class="badge-title">Pink City Harrier</h4>
+                        <p class="badge-desc">Awarded to all finishers of the <span class="highlight-pink">5K Heritage Run</span>. Celebrate your active start in the royal city!</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="badge-card">
+                        <div class="badge-icon-wrap">
+                            <i class="fa-solid fa-wind"></i>
+                        </div>
+                        <h4 class="badge-title">Hawa Mahal Sprinter</h4>
+                        <p class="badge-desc">Awarded to 10K finishers completing the race <span class="highlight-gold">under 60 minutes</span>. You matched the speed of Jaipur's breezes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="badge-card">
+                        <div class="badge-icon-wrap">
+                            <i class="fa-solid fa-water"></i>
+                        </div>
+                        <h4 class="badge-title">Jal Mahal Conqueror</h4>
+                        <p class="badge-desc">The ultimate accolade. Awarded to runners completing the full <span class="highlight-pink">21K Half Marathon</span> overlooking the lake.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marathon Runner Tools Section -->
+    <section id="tools" class="tools-section">
+        <div class="aura-container">
+            <div class="aura-bubble aura-purple"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="section-title-wrapper reveal">
+                <span class="section-subtitle">Runner Kits</span>
+                <h2 class="section-title text-gradient">Event Preparation Tools</h2>
+            </div>
+
+            <div class="row g-5">
+                <!-- Target Pace Calculator -->
+                <div class="col-lg-6 reveal">
+                    <div class="tool-card">
+                        <h3 class="tool-title"><i class="fa-solid fa-calculator text-gradient-pink"></i> Pace Goal Calculator</h3>
+                        <p class="text-muted small">Input your distance and target finishing time to instantly compute the <span class="highlight-pink">target pace</span> you need to maintain on race day.</p>
+                        
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label class="form-label">Race Distance</label>
+                                <select id="calcDistance" class="form-select">
+                                    <option value="5">5K Walk & Run</option>
+                                    <option value="10" selected>10K Heritage Challenge</option>
+                                    <option value="21.1">21K Royal Half Marathon</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">Target Hours</label>
+                                <input type="number" id="calcHours" class="form-control" value="1" min="0" max="23">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">Target Minutes</label>
+                                <input type="number" id="calcMinutes" class="form-control" value="0" min="0" max="59">
+                            </div>
+                        </div>
+
+                        <div class="calculator-display">
+                            <div id="calcPaceResult" class="calc-val">6:00</div>
+                            <div class="calc-lbl">Required Pace (Min/KM)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race Day Gear Checklist -->
+                <div class="col-lg-6 reveal">
+                    <div class="tool-card">
+                        <h3 class="tool-title"><i class="fa-solid fa-list-check text-gradient-pink"></i> Race Day Gear Checklist</h3>
+                        <p class="text-muted small">Tap items to mark them as packed! Your progress is <span class="highlight-gold">saved automatically</span> as you prepare for the flag-off.</p>
+                        
+                        <div id="gearChecklist">
+                            <div class="checklist-item" data-id="bib">
+                                <div class="checklist-checkbox"><i class="fa-solid fa-check"></i></div>
+                                <span class="checklist-text">Timing Bib & Safety Pins (Collected at Expo)</span>
+                            </div>
+                            <div class="checklist-item" data-id="shirt">
+                                <div class="checklist-checkbox"><i class="fa-solid fa-check"></i></div>
+                                <span class="checklist-text">Official Dry-fit Heritage Run T-shirt</span>
+                            </div>
+                            <div class="checklist-item" data-id="shoes">
+                                <div class="checklist-checkbox"><i class="fa-solid fa-check"></i></div>
+                                <span class="checklist-text">Running Shoes & Comfort/Sports Socks</span>
+                            </div>
+                            <div class="checklist-item" data-id="hydra">
+                                <div class="checklist-checkbox"><i class="fa-solid fa-check"></i></div>
+                                <span class="checklist-text">Hydration Flask / Waist Belt (Reusable bottle)</span>
+                            </div>
+                            <div class="checklist-item" data-id="idcard">
+                                <div class="checklist-checkbox"><i class="fa-solid fa-check"></i></div>
+                                <span class="checklist-text">Govt Photo ID (Required for baggage/medical check)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule-section">
+        <div class="container">
+            <div class="section-title-wrapper reveal">
+                <span class="section-subtitle">Event Timeline</span>
+                <h2 class="section-title text-gradient">Schedule of Events</h2>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Schedule Buttons -->
+                    <div class="schedule-nav reveal" role="tablist">
+                        <button class="schedule-btn active" id="expo-tab" data-bs-toggle="pill" data-bs-target="#expo-schedule" type="button" role="tab" aria-selected="true">
+                            <i class="fa-solid fa-briefcase me-2"></i>Bib Expo (23-24 July)
+                        </button>
+                        <button class="schedule-btn" id="raceday-tab" data-bs-toggle="pill" data-bs-target="#raceday-schedule" type="button" role="tab" aria-selected="false">
+                            <i class="fa-solid fa-person-running me-2"></i>Race Day (25 July)
+                        </button>
+                    </div>
+
+                    <!-- Tab Contents -->
+                    <div class="tab-content">
+                        <!-- Bib Expo Tab -->
+                        <div class="tab-pane fade show active" id="expo-schedule" role="tabpanel" aria-labelledby="expo-tab">
+                            <div class="timeline-event-card reveal">
+                                <div class="event-time">10:00 AM</div>
+                                <div class="event-details-col">
+                                    <h4>Bib Distribution & Expo Starts</h4>
+                                    <p class="text-muted">Venue: <span class="highlight-gold">Sawai Mansingh Stadium</span>, Jaipur. Bring your registration QR code and government photo ID.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-event-card reveal">
+                                <div class="event-time">02:00 PM</div>
+                                <div class="event-details-col">
+                                    <h4>Expert Runner Panel & Route Q&A</h4>
+                                    <p class="text-muted">Get professional tips on running in <span class="highlight-pink">July weather</span> and understanding the twists and turns of the heritage course.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-event-card reveal">
+                                <div class="event-time">07:00 PM</div>
+                                <div class="event-details-col">
+                                    <h4>Expo Day Close</h4>
+                                    <p class="text-muted">Note: <span class="highlight-pink">No bibs</span> will be distributed on the race day under any circumstances. Please collect in advance!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Race Day Tab -->
+                        <div class="tab-pane fade" id="raceday-schedule" role="tabpanel" aria-labelledby="raceday-tab">
+                            <div class="timeline-event-card">
+                                <div class="event-time">04:30 AM</div>
+                                <div class="event-details-col">
+                                    <h4>Holding Area & Baggage Counter Opens</h4>
+                                    <p class="text-muted">Venue: <span class="highlight-gold">Albert Hall Museum Gate</span>. Warm tea and dynamic stretching support available.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-event-card">
+                                <div class="event-time">05:30 AM</div>
+                                <div class="event-details-col">
+                                    <h4>Dynamic Warm-Up & Line-Up</h4>
+                                    <p class="text-muted">Led by <span class="highlight-pink">professional fitness instructors</span> at the holding grids.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-event-card">
+                                <div class="event-time">06:00 AM</div>
+                                <div class="event-details-col">
+                                    <h4>Royal Half Marathon (21K) Flag-Off</h4>
+                                    <p class="text-muted">Followed by the <span class="highlight-pink">10K Challenge at 06:15 AM</span> and <span class="highlight-gold">5K Heritage Run at 06:30 AM</span>.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-event-card">
+                                <div class="event-time">08:00 AM</div>
+                                <div class="event-details-col">
+                                    <h4>Prize Distribution & Closing Ceremony</h4>
+                                    <p class="text-muted">Venue: <span class="highlight-gold">Jal Mahal finish plaza</span>. Folk dance performances and breakfast counters open.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section class="sponsors-section">
+        <div class="container">
+            <div class="marquee-container reveal">
+                <div class="marquee-content">
+                    <div class="sponsor-logo"><i class="fa-solid fa-hotel"></i> Royal Palace Hotels</div>
+                    <div class="sponsor-logo"><i class="fa-solid fa-water-drop"></i> AquaPure India</div>
+                    <div class="sponsor-logo"><i class="fa-solid fa-shirt"></i> ActiveWear Pro</div>
+                    <div class="sponsor-logo"><i class="fa-solid fa-bolt"></i> Rajasthan Tourism</div>
+                    <div class="sponsor-logo"><i class="fa-solid fa-hospital"></i> Fortis Healthcare</div>
+                    <div class="sponsor-logo"><i class="fa-solid fa-apple-whole"></i> FitMeal Co</div>
+                </div>
+                <!-- Duplicate for seamless looping -->
+                <div class="marquee-content" aria-hidden="true">
+                    <div class="sponsor-logo"><i class="fa-solid fa-hotel"></i> Royal Palace Hotels</div>
+                    <div class="sponsor-logo"><i class="fa-solid fa-water-drop"></i> AquaPure India</div>
+                    <div class="sponsor-logo"><i class="fa-solid fa-shirt"></i> ActiveWear Pro</div>
+                    <div class="sponsor-logo"><i class="fa-solid fa-bolt"></i> Rajasthan Tourism</div>
+                    <div class="sponsor-logo"><i class="fa-solid fa-hospital"></i> Fortis Healthcare</div>
+                    <div class="sponsor-logo"><i class="fa-solid fa-apple-whole"></i> FitMeal Co</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="faq-section">
+        <div class="container">
+            <div class="section-title-wrapper reveal">
+                <span class="section-subtitle">Have Questions?</span>
+                <h2 class="section-title text-gradient">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item reveal">
+                            <h2 class="accordion-header" id="faqHeadingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                                    How do I collect my runner kit & bib?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Runner kits, bib numbers, and dry-fit t-shirts will be distributed at the <span class="highlight-pink">Bib Expo on 23rd and 24th July</span> at the <span class="highlight-gold">Sawai Mansingh Stadium</span>. You must carry a copy of your registration confirmation email/SMS and a valid government photo ID. No bibs will be given on race day.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item reveal">
+                            <h2 class="accordion-header" id="faqHeadingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                    Is there a bag drop facility at the start line?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, a secured counter for baggage storage will be available at <span class="highlight-gold">Albert Hall Museum</span> (start line) starting 4:30 AM. Baggage will be safely transported by our logistics team to the finish line at <span class="highlight-pink">Jal Mahal</span>, where you can collect it after your run by displaying your bib number.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item reveal">
+                            <h2 class="accordion-header" id="faqHeadingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                    What is the weather like in Jaipur in late July?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Late July is during Jaipur's <span class="highlight-pink">monsoon season</span>. Expected temperatures in the early morning hover around <span class="highlight-gold">25°C to 28°C</span>, with high humidity. There is a possibility of light rain, which makes for a pleasant running environment. Water and electrolyte stations will be set up every 1.5 kilometers to ensure hydration.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item reveal">
+                            <h2 class="accordion-header" id="faqHeadingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                                    Can I change my race category after registering?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Category modifications can be made through your registration dashboard <span class="highlight-pink">until July 15, 2026</span>, subject to category availability. For upgrading from 5K to 10K or 21K, you will have to pay the registration difference. No downgrades or category changes are permitted after July 15.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-gradient-pink" id="registerModalLabel">Register for Jaipur Heritage Run</h5>
+                    <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Success Messaging Block -->
+                    <div id="successMsg" class="success-msg">
+                        <div class="success-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h3 class="mb-3 text-gradient">Registration Complete!</h3>
+                        <p class="mb-2 text-muted">Congratulations, <strong id="successRunnerName" class="text-white">Runner</strong>! You have successfully registered for the <strong id="successCategory" class="text-white">Category</strong>.</p>
+                        <p class="text-muted small">A confirmation email with your digital invoice and Bib collection details has been sent. See you on the track on July 25th!</p>
+                        <button type="button" class="btn btn-premium mt-4 px-4" data-bs-dismiss="modal">Done</button>
+                    </div>
+
+                    <!-- Main Form -->
+                    <form id="registrationForm" novalidate>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                                <div class="invalid-feedback">Please enter your full name.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="emailAddress" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="emailAddress" placeholder="you@example.com" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phoneNumber" class="form-label">Mobile Number</label>
+                                <input type="tel" class="form-control" id="phoneNumber" placeholder="10-digit number" required>
+                                <div class="invalid-feedback">Please enter a valid 10-digit mobile number.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="raceCategory" class="form-label">Race Category</label>
+                                <select class="form-select" id="raceCategory" required>
+                                    <option value="" selected disabled>Select distance...</option>
+                                    <option value="5k">5K Heritage Fun Run (₹499)</option>
+                                    <option value="10k">10K Heritage Challenge (₹799)</option>
+                                    <option value="21k">21K Royal Half Marathon (₹1299)</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a category.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="runnerAge" class="form-label">Age (on Race Day)</label>
+                                <input type="number" class="form-control" id="runnerAge" placeholder="Min age 12" required>
+                                <div class="invalid-feedback">Age must be between 12 and 99 years.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="runnerGender" class="form-label">Gender</label>
+                                <select class="form-select" id="runnerGender" required>
+                                    <option value="" selected disabled>Select gender...</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select your gender.</div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="termsAgree" required>
+                                    <label class="form-check-label text-muted small" for="termsAgree">
+                                        I certify that I am physically fit to participate in this race and agree to the event's waiver of liability and safety guidelines.
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-premium-outline" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" form="registrationForm" class="btn btn-premium">Complete Registration</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-person-running me-2 text-gradient-pink"></i>JAIPUR<span>HERITAGE</span>RUN
+                    </div>
+                    <p class="footer-desc">A premium athletic event fusing cultural heritage with physical endurance, taking runners on a route through India's pink city.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="footer-links">
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About event</a></li>
+                                <li><a href="#route">Route details</a></li>
+                                <li><a href="#categories">Race categories</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="footer-links">
+                                <li><a href="#rewards">Rewards</a></li>
+                                <li><a href="#tools">Runner Tools</a></li>
+                                <li><a href="#schedule">Schedule</a></li>
+                                <li><a href="#faqs">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h5 class="footer-heading">Contact Organizer</h5>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Jaipur Athletic Federation, Rambagh Road, Jaipur, Rajasthan 302005</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>support@jaipurheritagerun.com</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 141 555 7799</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom text-center text-md-start d-md-flex justify-content-between align-items-center">
+                <p class="mb-0">&copy; 2026 Jaipur Heritage Run. All Rights Reserved.</p>
+                <p class="mb-0 mt-2 mt-md-0 text-muted">Designed for Fitness & Heritage Enthusiasts.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

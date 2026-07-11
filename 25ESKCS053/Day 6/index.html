@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Directory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Student Directory</h1>
+
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search Student..."
+            onkeyup="searchStudent()">
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="avatar">R</div>
+
+            <h2>Rahul Sharma</h2>
+
+            <p class="roll">Roll No : 101</p>
+
+            <div class="details">
+                <p>Branch : CSE</p>
+                <p>Year : 2nd</p>
+                <p>CGPA : 8.9</p>
+                <p>Email : rahul@gmail.com</p>
+                <p>Phone : 9876543210</p>
+                <p>City : Jaipur</p>
+            </div>
+
+            <button onclick="toggle(this)">Show Details</button>
+        </div>
+
+        <div class="card">
+            <div class="avatar">P</div>
+
+            <h2>Priya Verma</h2>
+
+            <p class="roll">Roll No : 102</p>
+
+            <div class="details">
+                <p>Branch : IT</p>
+                <p>Year : 3rd</p>
+                <p>CGPA : 9.2</p>
+                <p>Email : priya@gmail.com</p>
+                <p>Phone : 9988776655</p>
+                <p>City : Delhi</p>
+            </div>
+
+            <button onclick="toggle(this)">Show Details</button>
+        </div>
+
+        <div class="card">
+            <div class="avatar">A</div>
+
+            <h2>Amit Singh</h2>
+
+            <p class="roll">Roll No : 103</p>
+
+            <div class="details">
+                <p>Branch : AI</p>
+                <p>Year : 1st</p>
+                <p>CGPA : 8.5</p>
+                <p>Email : amit@gmail.com</p>
+                <p>Phone : 9123456780</p>
+                <p>City : Jaipur</p>
+            </div>
+
+            <button onclick="toggle(this)">Show Details</button>
+        </div>
+
+        <div class="card">
+            <div class="avatar">S</div>
+
+            <h2>Sneha Gupta</h2>
+
+            <p class="roll">Roll No : 104</p>
+
+            <div class="details">
+                <p>Branch : ECE</p>
+                <p>Year : 4th</p>
+                <p>CGPA : 9.6</p>
+                <p>Email : sneha@gmail.com</p>
+                <p>Phone : 9011223344</p>
+                <p>City : Kota</p>
+            </div>
+
+            <button onclick="toggle(this)">Show Details</button>
+        </div>
+
+        <div class="card">
+            <div class="avatar">K</div>
+
+            <h2>Karan Mehta</h2>
+
+            <p class="roll">Roll No : 105</p>
+
+            <div class="details">
+                <p>Branch : Mechanical</p>
+                <p>Year : 2nd</p>
+                <p>CGPA : 8.1</p>
+                <p>Email : karan@gmail.com</p>
+                <p>Phone : 8899776655</p>
+                <p>City : Udaipur</p>
+            </div>
+
+            <button onclick="toggle(this)">Show Details</button>
+        </div>
+
+        <div class="card">
+            <div class="avatar">N</div>
+
+            <h2>Neha Joshi</h2>
+
+            <p class="roll">Roll No : 106</p>
+
+            <div class="details">
+                <p>Branch : Civil</p>
+                <p>Year : 3rd</p>
+                <p>CGPA : 8.8</p>
+                <p>Email : neha@gmail.com</p>
+                <p>Phone : 7766554433</p>
+                <p>City : Ajmer</p>
+            </div>
+
+            <button onclick="toggle(this)">Show Details</button>
+        </div>
+
+    </div>
+
+    <h2 id="message">No Student Found</h2>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

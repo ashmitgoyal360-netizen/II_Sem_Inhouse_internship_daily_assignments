@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarkKeep — Premium Bookmark Manager</title>
+  <!-- Google Fonts: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Lucide Icons (CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dark-theme">
+  <!-- App Container -->
+  <div class="app-layout">
+    
+    <!-- Sidebar -->
+    <aside class="app-sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">
+            <i data-lucide="bookmark"></i>
+          </div>
+          <span class="logo-text">Mark<span>Keep</span></span>
+        </div>
+        <button class="btn-icon mobile-close-btn" id="mobile-sidebar-close" aria-label="Close sidebar">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- Quick Filters -->
+        <div class="nav-section">
+          <span class="section-title">Overview</span>
+          <ul class="nav-list">
+            <li class="nav-item active" data-filter="all">
+              <i data-lucide="layers"></i>
+              <span class="nav-item-text">All Bookmarks</span>
+              <span class="badge" id="count-all">0</span>
+            </li>
+            <li class="nav-item" data-filter="favorites">
+              <i data-lucide="heart" class="heart-icon"></i>
+              <span class="nav-item-text">Favorites</span>
+              <span class="badge" id="count-favorites">0</span>
+            </li>
+            <li class="nav-item" data-filter="recent">
+              <i data-lucide="clock"></i>
+              <span class="nav-item-text">Recently Added</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Collections Section -->
+        <div class="nav-section">
+          <div class="section-header">
+            <span class="section-title">Collections</span>
+            <button class="btn-icon-sm" id="btn-add-collection" title="Add Collection">
+              <i data-lucide="plus"></i>
+            </button>
+          </div>
+          <ul class="nav-list" id="collections-list">
+            <!-- Dynamic Collections list -->
+          </ul>
+        </div>
+
+        <!-- Tags Section -->
+        <div class="nav-section">
+          <span class="section-title">Popular Tags</span>
+          <div class="tags-cloud" id="tags-list">
+            <!-- Dynamic Tags cloud -->
+          </div>
+        </div>
+      </nav>
+
+      <!-- Sidebar Footer Operations -->
+      <div class="sidebar-footer">
+        <button class="btn-sidebar btn-secondary-outline" id="btn-import-export">
+          <i data-lucide="arrow-left-right"></i>
+          <span>Import / Export</span>
+        </button>
+        <button class="btn-sidebar btn-danger-outline" id="btn-clear-all">
+          <i data-lucide="trash-2"></i>
+          <span>Clear Storage</span>
+        </button>
+        <div class="theme-toggle-container">
+          <span class="theme-label">Dark Theme</span>
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="app-main">
+      <!-- Top Bar -->
+      <header class="app-header">
+        <!-- Mobile Sidebar Toggle -->
+        <button class="btn-icon mobile-menu-btn" id="mobile-sidebar-toggle" aria-label="Open menu">
+          <i data-lucide="menu"></i>
+        </button>
+
+        <div class="header-search">
+          <i data-lucide="search" class="search-icon"></i>
+          <input type="text" id="search-input" placeholder="Search title, URL, tags, or description..." autocomplete="off">
+          <button class="clear-search-btn" id="clear-search-btn" style="display: none;">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <div class="header-actions">
+          <button class="btn btn-primary" id="btn-add-bookmark">
+            <i data-lucide="plus"></i>
+            <span>Add Bookmark</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Content Container -->
+      <div class="content-wrapper">
+        <!-- Dashboard Stats Grid -->
+        <section class="dashboard-stats">
+          <div class="stat-card">
+            <div class="stat-icon bg-blue-glow">
+              <i data-lucide="bookmark"></i>
+            </div>
+            <div class="stat-info">
+              <h3 id="stat-total">0</h3>
+              <p>Total Bookmarks</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon bg-pink-glow">
+              <i data-lucide="heart"></i>
+            </div>
+            <div class="stat-info">
+              <h3 id="stat-favorites">0</h3>
+              <p>Favorites</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon bg-purple-glow">
+              <i data-lucide="folder"></i>
+            </div>
+            <div class="stat-info">
+              <h3 id="stat-collections">0</h3>
+              <p>Collections</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon bg-green-glow">
+              <i data-lucide="tag"></i>
+            </div>
+            <div class="stat-info">
+              <h3 id="stat-tags">0</h3>
+              <p>Unique Tags</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Current View Heading -->
+        <div class="view-header">
+          <div class="view-title-area">
+            <h2 id="view-title">All Bookmarks</h2>
+            <span class="view-count" id="view-count">0 items</span>
+          </div>
+          <div class="view-actions">
+            <!-- Sort dropdown -->
+            <div class="select-wrapper">
+              <i data-lucide="sliders-horizontal" class="select-icon"></i>
+              <select id="sort-select">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="alphabetical">A - Z</option>
+              </select>
+            </div>
+            <!-- Grid / List Layout toggle -->
+            <div class="layout-toggle">
+              <button class="btn-icon active" id="layout-grid" title="Grid View">
+                <i data-lucide="layout-grid"></i>
+              </button>
+              <button class="btn-icon" id="layout-list" title="List View">
+                <i data-lucide="list"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bookmarks Area -->
+        <section class="bookmarks-grid" id="bookmarks-container">
+          <!-- Dynamically populated bookmark cards -->
+        </section>
+
+        <!-- Empty State Screen -->
+        <div class="empty-state" id="empty-state" style="display: none;">
+          <div class="empty-icon-container">
+            <i data-lucide="bookmark-x"></i>
+          </div>
+          <h3>No bookmarks found</h3>
+          <p id="empty-state-message">Start building your collection by adding a new bookmark.</p>
+          <button class="btn btn-primary" id="empty-state-add-btn">
+            <i data-lucide="plus"></i>
+            <span>Add Bookmark</span>
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ================= MODALS ================= -->
+
+  <!-- Add / Edit Bookmark Modal -->
+  <div class="modal-overlay" id="bookmark-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 id="modal-title">Add Bookmark</h3>
+        <button class="btn-icon modal-close-btn" data-close-modal>
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <form id="bookmark-form" novalidate>
+        <input type="hidden" id="bookmark-id">
+        
+        <div class="form-group">
+          <label for="bookmark-url">URL <span class="required">*</span></label>
+          <div class="input-with-icon">
+            <i data-lucide="link"></i>
+            <input type="url" id="bookmark-url" placeholder="https://example.com" required>
+          </div>
+          <span class="error-message" id="url-error">Please enter a valid URL (starting with http:// or https://)</span>
+        </div>
+
+        <div class="form-group">
+          <label for="bookmark-title">Title <span class="required">*</span></label>
+          <div class="input-with-icon">
+            <i data-lucide="heading"></i>
+            <input type="text" id="bookmark-title" placeholder="e.g. GitHub" required>
+          </div>
+          <span class="error-message" id="title-error">Please enter a title</span>
+        </div>
+
+        <div class="form-group">
+          <label for="bookmark-desc">Description</label>
+          <textarea id="bookmark-desc" rows="3" placeholder="Add a short description about this page..."></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookmark-collection">Collection</label>
+            <div class="select-wrapper">
+              <i data-lucide="folder" class="select-icon"></i>
+              <select id="bookmark-collection">
+                <option value="Unassigned">Unassigned</option>
+                <!-- Dynamic options added here -->
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="bookmark-new-collection">Or Create New</label>
+            <div class="input-with-icon">
+              <i data-lucide="folder-plus"></i>
+              <input type="text" id="bookmark-new-collection" placeholder="e.g., Resources">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="bookmark-tags">Tags <span class="label-helper">(comma separated)</span></label>
+          <div class="input-with-icon">
+            <i data-lucide="tag"></i>
+            <input type="text" id="bookmark-tags" placeholder="e.g. dev, git, tutorial">
+          </div>
+          <div class="tags-preview" id="tags-preview-container"></div>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-container">
+            <input type="checkbox" id="bookmark-favorite">
+            <span class="checkmark"></span>
+            <span class="checkbox-label-text">
+              <i data-lucide="heart" class="heart-icon-inline"></i> Mark as Favorite
+            </span>
+          </label>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-close-modal>Cancel</button>
+          <button type="submit" class="btn btn-primary" id="btn-save-bookmark">Save Bookmark</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Add Collection Modal -->
+  <div class="modal-overlay" id="collection-modal">
+    <div class="modal-container modal-sm">
+      <div class="modal-header">
+        <h3>New Collection</h3>
+        <button class="btn-icon modal-close-btn" data-close-modal>
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <form id="collection-form">
+        <div class="form-group">
+          <label for="new-collection-name">Collection Name</label>
+          <div class="input-with-icon">
+            <i data-lucide="folder"></i>
+            <input type="text" id="new-collection-name" placeholder="e.g., Personal" required>
+          </div>
+          <span class="error-message" id="collection-error">Collection name already exists or is invalid</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-close-modal>Cancel</button>
+          <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Import / Export Modal -->
+  <div class="modal-overlay" id="import-export-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3>Import / Export Bookmarks</h3>
+        <button class="btn-icon modal-close-btn" data-close-modal>
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="import-export-body">
+        <div class="operation-panel">
+          <div class="operation-icon">
+            <i data-lucide="upload-cloud"></i>
+          </div>
+          <h4>Import Bookmarks</h4>
+          <p>Restore your data from a previously exported `.json` file.</p>
+          
+          <label class="btn btn-secondary-outline file-upload-label">
+            <i data-lucide="file-json"></i>
+            <span>Choose JSON File</span>
+            <input type="file" id="import-file-input" accept=".json" style="display: none;">
+          </label>
+          <div id="import-file-status" class="file-status-info">No file chosen</div>
+        </div>
+
+        <div class="operation-divider"></div>
+
+        <div class="operation-panel">
+          <div class="operation-icon">
+            <i data-lucide="download-cloud"></i>
+          </div>
+          <h4>Export Bookmarks</h4>
+          <p>Backup all your bookmarks, collections, and settings to a JSON file.</p>
+          <button class="btn btn-primary" id="btn-export-action">
+            <i data-lucide="download"></i>
+            <span>Export Backup</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- App Main Script -->
+  <script src="app.js"></script>
+</body>
+</html>

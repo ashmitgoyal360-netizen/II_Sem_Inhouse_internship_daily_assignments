@@ -1,0 +1,17 @@
+{
+  "name": "markkeep",
+  "version": "1.0.0",
+  "description": "Premium glassmorphic web bookmark manager app.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server -p 3000"
+  },
+  "keywords": [
+    "bookmarks",
+    "manager",
+    "web",
+    "glassmorphic"
+  ],
+  "author": "Antigravity",
+  "license": "ISC"
+}
